@@ -68,35 +68,18 @@ git clone https://github.com/your-username/rag-genai-project.git
 cd rag-genai-project
 ```
 
-### 2️⃣ Create and Activate Virtual Environment
-```bash
-python -m venv venv
-source venv/bin/activate  # on Mac/Linux
-venv\Scripts\activate     # on Windows
-```
 
-### 3️⃣ Install Dependencies
-```bash
-pip install -r requirements.txt
-```
 
-### 4️⃣ Configure Environment Variables
-Create a `.env` file:
-```
-OPENAI_API_KEY=your_openai_key
-VECTOR_DB_PATH=./vector_store
-EMBEDDING_MODEL=text-embedding-3-large
+
 ```
 
 ### 5️⃣ Run the Application
 ```bash
-python app.py
+docker run --rm -it -p 5001:5000 -v ./data:/app/data cyberdocai
 ```
+will run on localhost 5000
 
-Or with Streamlit UI:
-```bash
-streamlit run app.py
-```
+
 
 ---
 
