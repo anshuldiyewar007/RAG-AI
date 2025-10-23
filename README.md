@@ -9,11 +9,11 @@ This project enables users to query their **private or domain-specific data** us
 ## 🚀 Features
 
 - 🔍 **Context Retrieval:** Fetches the most relevant chunks from documents using embeddings.  
-- 🧩 **Generative Response:** Uses an LLM (e.g., OpenAI, Mistral, or Llama) to generate grounded answers.  
+- 🧩 **Generative Response:** Uses an LLM (Llama) to generate grounded answers.  
 - 💾 **Vector Database Integration:** Supports FAISS / Chroma / Pinecone for similarity search.  
 - 🗂️ **Multi-format Document Support:** Handles PDFs, text files, and more.  
 - 🧠 **Memory & Chat History:** Retains conversation context.  
-- ⚙️ **API & Web UI:** Includes backend APIs and an optional Streamlit/React interface.
+- ⚙️ **Purely local: doesnt run on any API using llama cpp python model to generate answers.
 
 ---
 
@@ -52,7 +52,7 @@ This project enables users to query their **private or domain-specific data** us
 |------------|-------------|
 | **Frontend (optional)** | React.js / Streamlit |
 | **Backend** | FastAPI / Flask |
-| **LLM** | OpenAI GPT / Mistral / Llama 3 |
+| **LLM** | cpp Llama 3 |
 | **Embeddings** | OpenAI Embeddings / SentenceTransformers |
 | **Vector Store** | FAISS / Chroma / Pinecone |
 | **Storage** | Local Files / Cloud Bucket |
@@ -93,34 +93,11 @@ will run on localhost 5000
 
 ---
 
-## 🧪 Folder Structure
 
-```
-rag-genai-project/
-│
-├── data/                 # Source documents
-├── embeddings/           # Stored vectors or FAISS index
-├── src/
-│   ├── ingest.py         # Data ingestion and chunking
-│   ├── embedder.py       # Embedding generation
-│   ├── retriever.py      # Context retrieval
-│   ├── generator.py      # LLM-based generation
-│   └── app.py            # Main API/UI
-│
-├── requirements.txt
-├── .env.example
-└── README.md
-```
 
 ---
 
-## 🧠 Future Enhancements
 
-- 🗄️ Add PostgreSQL vector store (pgvector)  
-- 🌐 Integrate web crawling for dynamic updates  
-- 🗣️ Voice-based query support  
-- 🔐 User authentication & access control  
-- ☁️ Deploy via AWS ECS / Azure Container Apps
 
 ---
 
@@ -142,8 +119,3 @@ This project is licensed under the **MIT License** — feel free to use, modify,
 
 ---
 
-## 💬 Contact
-
-👤 **Your Name**  
-📧 your.email@example.com  
-🌐 [LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/your-username)
